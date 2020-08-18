@@ -1,0 +1,49 @@
+.items {
+    margin-top: 3rem;
+    background-color: rgb(248, 246, 246);
+    border-radius: 3px;
+    box-shadow: 2px 2px 8px black;
+
+    &__singleItem {
+        padding: 1rem 2rem;
+        @include styleFlex(flex, null, space-between, null);
+        border-bottom: 2px solid rgb(110, 105, 105);
+    }
+
+    &__front,
+    &__back {
+        @include styleFlex(flex, null, null, center);
+
+        &:hover &--pen {
+            display: block;
+        }
+
+        &--uncheck,
+        &--pen,
+        &--bin,
+        &--category {
+            height: 20px;
+            margin-right: 1rem;
+            
+        }
+
+        &--name {
+            font-weight: bold;
+        }
+
+        &--pen {
+            margin-left:1rem;
+            display: none;
+        }
+
+        &--edit {
+            @include style(inherit, inherit, 2px solid $box-shadow, null, 0.3rem 1rem, null);
+            width: 100px;
+            font-weight: bold;
+
+            &:focus {
+                outline: none;
+        }
+        }
+    }
+}

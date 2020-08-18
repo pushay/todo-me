@@ -1,0 +1,4 @@
+<div #main class="main">
+    <app-main-lists [name]="name" [modalComponent]="modalComponent"></app-main-lists>
+    <app-main-modal (sentListName)="onGettingListName($event)" #modalComponent></app-main-modal>
+</div>

@@ -1,0 +1,3 @@
+<div class="dropdown">
+    <li (click)="sortTodos(sort.text)" *ngFor="let sort of sorts" class="dropdown__element" [value]="sort.text">{{sort.name}}</li>
+</div>

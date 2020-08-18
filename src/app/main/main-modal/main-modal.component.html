@@ -1,0 +1,9 @@
+<div class="modal" #modal>
+    <div class="modal__list">
+        <div class="form-group modal__input">
+            <label class="modal__input--label"  for="list">Create a list</label>
+            <input class="modal__input--input" maxlength="10" minlength="1" autocomplete="off" #listName id="listInput">
+        </div>
+        <app-button [label]="'Create'"  (click)="closeModal(); sendListName(listName.value)"></app-button>
+    </div>
+</div>

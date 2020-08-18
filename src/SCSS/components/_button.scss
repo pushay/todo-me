@@ -1,0 +1,17 @@
+.button {
+    @include style(inherit, inherit, 1.5px solid $box-shadow, 30px, 0.5rem 3rem, null);
+    background-color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media(max-width:600px){
+    .button {
+        @include style(inherit, 0.9rem, 1.5px solid $box-shadow, 30px, 0.4rem 2rem, null);
+    }
+}

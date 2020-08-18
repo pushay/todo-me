@@ -1,0 +1,57 @@
+.lack {
+    @include position(absolute,50%, null, null, 50%);
+    transform: translate(-50%,-50%);
+    @include styleFlex(flex, column, null, center);
+
+    &__image {
+        margin:0 0 2rem 4.5rem;
+        height: 200px;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:1350px){
+    .lack{
+        
+        &__image {
+            height: 170px;
+        }
+
+        &__text {
+            text-align: center;
+        }
+    }
+}
+
+
+@media(max-width:750px){
+    .lack{
+        
+        &__image {
+            height: 150px;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width:400px){
+    .lack{
+        
+        &__image {
+            height: 130px;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+    }
+}

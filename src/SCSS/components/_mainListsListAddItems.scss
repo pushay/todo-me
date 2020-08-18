@@ -1,0 +1,189 @@
+
+.addItems {
+    z-index:10;
+    background-color:$secondary-color;
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    box-shadow: 2px 3px 4px $box-shadow;
+    
+    .form {
+        @include styleFlex(flex, null, space-around, center); 
+
+        &__button {
+            @include style(inherit, 1.2rem, none, 20px, 1rem 2rem, 3px 3px 20px $box-shadow);
+            background-color: $pure-white;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:disabled {
+                opacity:0.5
+            }
+        }
+    }
+
+.form-group {
+    @include styleFlex(flex, column, null, center);
+    margin-right: 1.5rem;
+
+    &__input {
+        @include style(inherit, 0.8rem, 2px solid $box-shadow, null, 0.3rem 1rem, null);
+        font-weight: bold;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__label {
+        color: $pure-white;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        
+    }
+   
+    &__category {
+        @include style(inherit, 0.9rem, 2px solid $box-shadow, null, 0.15rem 1rem, null);
+        font-weight: bold;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--option {
+            @include style(inherit, inherit,null, null, 0.4rem 1rem, null);
+        }
+    }
+
+}
+}
+
+@media(max-width:1400px){
+
+    .addItems {
+
+    .form {
+
+        &__button {
+            @include style(inherit, 1.2rem, none, 20px, 1rem 1.5rem, 3px 3px 20px $box-shadow);
+        }
+    }
+
+    .form-group {
+        margin-right: 1rem;
+
+        &__label {
+            font-size: 1.2rem;
+        }
+    }
+}
+}
+
+@media(max-width:1200px){
+
+    .addItems {
+
+    .form {
+
+        &__button {
+            @include style(inherit, 1rem, none, 20px, 1rem 1.5rem, 3px 3px 20px $box-shadow);
+        }
+    }
+}
+}
+
+
+@media(max-width:1050px){
+
+    .addItems {
+
+    .form {
+
+        &__button {
+            @include style(inherit, 1rem, none, 20px, 1rem 0, 3px 3px 20px $box-shadow);
+            width: 65px;
+            margin-right: 1rem;
+        }
+    }
+
+    .form-group {
+        margin-right: 1rem;
+
+        &__label {
+            font-size: 1rem;
+        }
+    }
+}
+}
+
+@media(max-width:750px){
+    .addItems {
+
+        .form-group {
+            width: 150px;
+
+            &__input {
+                @include style(inherit, 0.8rem, 2px solid $box-shadow, null, 0.3rem 1rem, null);
+                width: 100px;
+            }
+
+            &__label {
+                width: 140px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media(max-width:600px){
+
+    .addItems {
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        &__button {
+            @include style(inherit, 1rem, 2px solid $box-shadow, null, 1rem 2rem, null);
+            width: 120px;
+            margin-right: 0;
+        }
+    }
+
+    .form-group {
+        width: 300px;
+        padding: 1.5rem 0 0 0;
+        margin-right: 0rem;
+
+        &__label {
+            width: 250px;
+        }
+
+        &__input {
+            width: 250px;
+        }
+    }
+}
+}
+
+@media(max-width:460px){
+.addItems {
+
+    .form-group {
+
+        &__label {
+            width: 200px;
+        }
+
+        &__input {
+            width: 160px;
+        }
+    }
+
+} 
+}
