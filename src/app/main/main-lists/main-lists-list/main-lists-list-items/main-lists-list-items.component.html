@@ -1,18 +1,18 @@
 <div class="items" >
     <div class="items__singleItem" *ngFor="let todo of todos; let i=index">
         <div class="items__front">
-            <img (click)="changeMark(i, $event)" #mark class="items__front--uncheck" [src]="todo['status'] == 'completed' ? '../../../../../assets/images/checkbox-checked.png' : '../../../../../assets/images/checkbox-unchecked.png'">
+            <img (click)="changeMark(i, $event)" #mark class="items__front--uncheck" [src]="todo['status'] == 'completed' ? './assets/images/checkbox-checked.png' : './assets/images/checkbox-unchecked.png'">
             <span *ngIf="!edited" class="items__front--name">{{todo.name}}</span>
             <ng-container *ngIf="edited">
                 <form  [formGroup]="form">
                     <input formControlName="newName" minlength="1" maxlength="20" (keypress)="changeName($event, i)" class="items__front--edit">
                 </form>
             </ng-container>
-            <img class="items__front--pen" #pen (click)="editTodo(i)" *ngIf="!edited" src="../../../../../assets/images/pencil.png">
+            <img class="items__front--pen" #pen (click)="editTodo(i)" *ngIf="!edited" src="./assets/images/pencil.png">
         </div>
         <div class="items__back">
             <img class="items__back--category" [src]=changeIcon(i)>
-            <img class="items__back--bin" (click)="deleteTodos(i)" src="../../../../../assets/images/bin.png">
+            <img class="items__back--bin" (click)="deleteTodos(i)" src="./assets/images/bin.png">
         </div>
     </div>
 </div>

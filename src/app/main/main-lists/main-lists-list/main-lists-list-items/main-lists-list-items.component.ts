@@ -56,26 +56,25 @@ export class MainListsListItemsComponent implements OnInit, OnDestroy  {
 
     changeMark(i, event){
         this.todos[i]['status'] = 'completed';
-        event.target.src = '../../../../../assets/images/checkbox-checked.png';
         this.todoService.updateMarks(this.todos)
     }
 
     changeIcon(i){
         switch(this.todos[i]['category']) {
             case 'school':
-                return '../../../../../assets/images/book.png';
+                return './assets/images/book.png';
             case 'home':
-                return '../../../../../assets/images/home.png';
+                return './assets/images/home.png';
             case 'work':
-                return '../../../../../assets/images/library.png';
+                return './assets/images/library.png';
             case 'food':
-                return '../../../../../assets/images/spoon-knife.png';
+                return './assets/images/spoon-knife.png';
             case 'health':
-                return '../../../../../assets/images/aid-kit.png';
+                return './assets/images/aid-kit.png';
             case 'important':
-                return '../../../../../assets/images/bell.png';
+                return './assets/images/bell.png';
             case 'fun':
-                return '../../../../../assets/images/accessibility.png'
+                return './assets/images/accessibility.png'
             default:
                 break
         }
