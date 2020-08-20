@@ -14,12 +14,10 @@ export class TodoService {
     clearTodos:Todo[]= [];
 
     getTodos(){
-        console.log(this.todos)
         return this.todos
     }
 
     getClearTodos(){
-        console.log(this.clearTodos)
         return this.clearTodos
     }
 
@@ -33,8 +31,6 @@ export class TodoService {
     updateTodo(todos){
         this.todos = todos;
         this.todosChanging.next(this.todos);
-        console.log(this.clearTodosChanging, 'clear ones')
-        console.log(this.todosChanging, 'todos')
     }
 
     updateMarks(todos){

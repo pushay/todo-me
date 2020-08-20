@@ -2,8 +2,8 @@
     <div class="list__front" #list >
         <h1 class="list__front--heading">{{name}}</h1>
         <div class="list__settings">
-            <img class="list__settings--bin" (click)="deleteList();sendList()" src="../../../assets/images/bin.png">
-            <img class="list__settings--sort" #toggleButton (click)="toggleMenu($event)" src="../../../assets//images/equalizer.png">
+            <img class="list__settings--bin" (click)="deleteList();sendList()" src="./assets/images/bin.png">
+            <img class="list__settings--sort" #toggleButton (click)="toggleMenu($event)" src="./assets//images/equalizer.png">
             <app-dropdown *ngIf="dropdownVisible"></app-dropdown>
         </div>
     </div>
